@@ -1,0 +1,6 @@
+framework module paymentDemoIOS {
+  umbrella header "paymentDemoIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

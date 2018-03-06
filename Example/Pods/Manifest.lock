@@ -1,0 +1,49 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.3.0)
+  - Alamofire (4.7.0)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - moa (9.0.2)
+  - ObjectMapper (3.1.0)
+  - paymentDemoIOS (1.0.0):
+    - ActionSheetPicker-3.0
+    - Alamofire
+    - AlamofireObjectMapper
+    - moa
+    - PKHUD
+    - RealmSwift
+  - PKHUD (5.0.0)
+  - Realm (3.1.1):
+    - Realm/Headers (= 3.1.1)
+  - Realm/Headers (3.1.1)
+  - RealmSwift (3.1.1):
+    - Realm (= 3.1.1)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - Alamofire
+  - AlamofireObjectMapper
+  - moa
+  - paymentDemoIOS (from `../`)
+  - PKHUD
+  - RealmSwift
+
+EXTERNAL SOURCES:
+  paymentDemoIOS:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  moa: b73dc5e0efa1fad00711c4608e41b197f4d15b12
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  paymentDemoIOS: 304a8117bf0c9d869c72ce04e0cf69b2467254fa
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
+  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
+  RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
+
+PODFILE CHECKSUM: ead0d97ed51dc12a64762cbaa0874fcf5dca8ce2
+
+COCOAPODS: 1.4.0

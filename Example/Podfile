@@ -1,0 +1,18 @@
+use_frameworks!
+
+    pod 'moa'
+    pod 'PKHUD'
+    pod 'AlamofireObjectMapper'
+    pod 'Alamofire'
+    pod 'ActionSheetPicker-3.0'
+    pod 'RealmSwift'
+
+target 'paymentDemoIOS_Example' do
+  pod 'paymentDemoIOS', :path => '../'
+
+  target 'paymentDemoIOS_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
