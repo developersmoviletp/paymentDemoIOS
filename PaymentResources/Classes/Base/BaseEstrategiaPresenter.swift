@@ -11,11 +11,9 @@ import UIKit
 public class BaseEstrategiaPresenter: BasePresenter, AlamofireResponseDelegate {
 
     var mUser : User!
-    var mFormalityEntity : FormalityEntity!
     
     override func viewDidLoad() {
         mUser = mDataManager.queryWhere(object: User.self).findFirst()
-        mFormalityEntity = mDataManager.queryWhere(object: FormalityEntity.self).findFirst()
     }
     
     public func onRequestWs(){
