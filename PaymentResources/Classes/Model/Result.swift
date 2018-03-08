@@ -11,9 +11,9 @@ import ObjectMapper
 
 public class Result: NSObject, Mappable {
     
-    var result : String = ""
-    var idResult : String = ""
-    var descriptionValue : String = ""
+    public var result : String = ""
+    public var idResult : String = ""
+    public var descriptionValue : String = ""
 
     public required convenience init?(map: Map) {
         self.init()

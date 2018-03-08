@@ -3,9 +3,9 @@ import ObjectMapper
 
 open class AdditionalServices: NSObject, Mappable{
     
-    var mainImageAdditional: String?
-    var titleImageAdditional: String?
-    var legendAdditional: String?
+    open var mainImageAdditional: String?
+    open var titleImageAdditional: String?
+    open var legendAdditional: String?
     
     
     public required convenience init?(map: Map) {

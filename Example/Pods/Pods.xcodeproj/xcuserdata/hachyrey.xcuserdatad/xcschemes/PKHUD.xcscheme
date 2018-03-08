@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "608F7B0FF6FF1C187D1D5ADE0097EC3C"
+               BlueprintIdentifier = "BEE7B36FF084D2E3545480AAF910CECE"
                BlueprintName = "PKHUD"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "PKHUD.framework">

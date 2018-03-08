@@ -16,8 +16,8 @@ public class NameData: Object, Mappable {
         
     }
     
-    @objc dynamic var uuid : String = UUID().uuidString
-    @objc dynamic var name: String?
+    @objc public dynamic var uuid : String = UUID().uuidString
+    @objc public dynamic var name: String?
     
     convenience init(name: String) {
         self.init()

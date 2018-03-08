@@ -12,9 +12,9 @@ import RealmSwift
 
 public class ResultBean: Object, Mappable {
 
-    @objc dynamic  var result : String = ""
-    @objc dynamic  var idResult : String = ""
-    @objc dynamic  var descript : String = ""
+    @objc public dynamic  var result : String = ""
+    @objc public dynamic  var idResult : String = ""
+    @objc public dynamic  var descript : String = ""
     
     
     required convenience public init?(map: Map) {

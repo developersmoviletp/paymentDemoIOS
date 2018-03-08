@@ -11,9 +11,9 @@ import ObjectMapper
 
 public class RestFaultElementBean: NSObject, Mappable {
     
-    var summary : String = ""
-    var code : String = ""
-    var detail : String = ""
+    public var summary : String = ""
+    public var code : String = ""
+    public var detail : String = ""
     
     public required convenience init?(map: Map) {
         self.init()

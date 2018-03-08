@@ -11,10 +11,10 @@ import ObjectMapper
 
 public class RegisterCardRequest: BaseRequest {
     
-    var accountNumber : String?
-    var newCard : NewCard?
+    public var accountNumber : String?
+    public var newCard : NewCard?
     
-    init(accountNumber : String, newCard : NewCard) {
+    public init(accountNumber : String, newCard : NewCard) {
         super.init()
         self.accountNumber = accountNumber
         self.newCard = newCard

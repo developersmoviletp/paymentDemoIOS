@@ -3,8 +3,8 @@ import ObjectMapper
 
 open class AddressComponent : NSObject, Mappable{
     
-    var long_name: String?
-    var short_name : String?
+    open var long_name: String?
+    open var short_name : String?
     
     public required convenience init?(map: Map) {
         self.init()

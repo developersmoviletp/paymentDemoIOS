@@ -11,13 +11,13 @@ import ObjectMapper
 
 public class NewCard: NSObject, Mappable {
 
-    var name : String = ""
-    var lastName : String = ""
-    var secondLastName : String = ""
-    var cardNumber : String = ""
-    var expirationMonth : String = ""
-    var expirationYear : String = ""
-    var ccType : String = ""
+    public var name : String = ""
+    public var lastName : String = ""
+    public var secondLastName : String = ""
+    public var cardNumber : String = ""
+    public var expirationMonth : String = ""
+    public var expirationYear : String = ""
+    public var ccType : String = ""
     
     override init(){
     }

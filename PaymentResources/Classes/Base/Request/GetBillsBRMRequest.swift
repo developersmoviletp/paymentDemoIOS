@@ -10,10 +10,10 @@ import UIKit
 import ObjectMapper
 
 public class GetBillsBRMRequest: BaseRequest {
-    var accountNumber: String?
-    var userPassIp: UserPassIp?
+    public var accountNumber: String?
+    public var userPassIp: UserPassIp?
     
-    init(accountNumber: String, userPass:  UserPassIp){
+    public init(accountNumber: String, userPass:  UserPassIp){
         super.init()
         self.accountNumber =  accountNumber
         self.userPassIp = userPass

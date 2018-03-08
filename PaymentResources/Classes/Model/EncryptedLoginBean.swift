@@ -12,10 +12,10 @@ import RealmSwift
 
 public class EncryptedLoginBean: Object, Mappable {
 
-    @objc dynamic var uuid : String = UUID().uuidString
-    @objc dynamic var user : String = "pU5IFduWKuA="
-    @objc dynamic var password : String = "10qnrC9ZB4Pq7IaUOTqu3g=="
-    @objc dynamic var ip : String = "p/ByNk8ng6S/bIgFpeCitg=="
+    @objc public dynamic var uuid : String = UUID().uuidString
+    @objc public dynamic var user : String = "pU5IFduWKuA="
+    @objc public dynamic var password : String = "10qnrC9ZB4Pq7IaUOTqu3g=="
+    @objc public dynamic var ip : String = "p/ByNk8ng6S/bIgFpeCitg=="
     
     required convenience public init?(map: Map) {
         self.init()

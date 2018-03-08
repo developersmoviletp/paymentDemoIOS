@@ -11,8 +11,8 @@ import ObjectMapper
 
 public class PaymentRegisteredCardResponse: BaseResponse {
 
-    var resultValue : String!
-    var transactionNumber : String!
+    public var resultValue : String!
+    public var transactionNumber : String!
     
     required convenience public init?(map: Map) {
         self.init()

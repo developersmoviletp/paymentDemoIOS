@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 
 public class CheckBalanceBRMResponse: BaseResponse {
-    var arrResult: ArrResult?
+    public var arrResult: ArrResult?
     
     required convenience public init?(map: Map) {
         self.init()
@@ -21,18 +21,18 @@ public class CheckBalanceBRMResponse: BaseResponse {
     }
 }
 
-class ArrResult: NSObject,Mappable{
+public class ArrResult: NSObject,Mappable{
     
-    var idResult: Int?
-    var result: Int?
-    var resultDescription: String?
-    var arrDatosFactura : ArrDatosFactura?
+    public var idResult: Int?
+    public var result: Int?
+    public var resultDescription: String?
+    public var arrDatosFactura : ArrDatosFactura?
     
     required convenience public init?(map: Map) {
         self.init()
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         idResult <- map["idResult"]
         result <- map["result"]
         resultDescription <- map["resultDescription"]
@@ -40,14 +40,14 @@ class ArrResult: NSObject,Mappable{
     }
 }
 
-class ArrDatosFactura: NSObject, Mappable{
-    var totalPayable: String?
+public class ArrDatosFactura: NSObject, Mappable{
+    public var totalPayable: String?
     
     required convenience public init?(map: Map) {
         self.init()
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         totalPayable <- map["totalPagar"]
     }
 }

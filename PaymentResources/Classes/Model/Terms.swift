@@ -11,8 +11,8 @@ import ObjectMapper
 
 public class Terms : NSObject, Mappable{
     
-    var offset: String?
-    var value: String?
+    public var offset: String?
+    public var value: String?
 
     public required convenience init?(map: Map) {
         self.init()

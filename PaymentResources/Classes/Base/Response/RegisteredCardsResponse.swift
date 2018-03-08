@@ -11,7 +11,7 @@ import ObjectMapper
 
 public class RegisteredCardsResponse: BaseResponse {
     
-    var cards : [Card] = []
+    public var cards : [Card] = []
     
     required convenience public init?(map: Map) {
         self.init()

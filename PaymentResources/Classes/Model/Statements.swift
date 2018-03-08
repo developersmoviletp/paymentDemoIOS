@@ -11,9 +11,9 @@ import ObjectMapper
 
 public class Statements: NSObject, Mappable {
     
-    var date : String = ""
-    var balance : String = ""
-    var url : String = ""
+    public var date : String = ""
+    public var balance : String = ""
+    public var url : String = ""
     
     public required convenience init?(map: Map) {
         self.init()

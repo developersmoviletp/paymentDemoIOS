@@ -3,8 +3,8 @@ import ObjectMapper
 
 open class Addons: NSObject, Mappable {
     
-    var addonName : String = ""
-    var addonPayment : String = ""
+    open var addonName : String = ""
+    open var addonPayment : String = ""
     
     public required convenience init?(map: Map) {
         self.init()

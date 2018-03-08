@@ -11,9 +11,9 @@ import ObjectMapper
 
 public class RegisteredCardsRequest: BaseRequest {
     
-    var accountNumber : String?
+    public var accountNumber : String?
     
-    init(accountNumber : String) {
+    public init(accountNumber : String) {
         super.init()
         self.accountNumber = accountNumber
     }

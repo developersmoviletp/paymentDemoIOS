@@ -11,7 +11,7 @@ import ObjectMapper
 
 public class Information: NSObject, Mappable {
     
-    var type : String = ""
+    public var type : String = ""
     
     override init() {
         

@@ -11,16 +11,16 @@ import ObjectMapper
 
 public class LoginRequest: NSObject, Mappable {
 
-    var user : String?
-    var password : String?
-    var ip : String?
-    var versionAPP : String?
+    public var user : String?
+    public var password : String?
+    public var ip : String?
+    public var versionAPP : String?
     
-    override init() {
+    override public init() {
         super.init()
     }
     
-    init(user: String, password: String, ip: String) {
+    public init(user: String, password: String, ip: String) {
         self.user = user
         self.password = password
         self.ip = ip

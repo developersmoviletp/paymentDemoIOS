@@ -10,14 +10,14 @@ import UIKit
 import ObjectMapper
 
 public class CheckBalanceBRMRequest: BaseRequest {
-    var accountNumber: String?
+    public var accountNumber: String?
 
-    init(accountNumber: String){
+    public init(accountNumber: String){
         super.init()
         self.accountNumber =  accountNumber
     }
     
-    public required init?(map: Map) {
+    public required  init?(map: Map) {
         fatalError("init(map:) has not been implemented")
     }
     

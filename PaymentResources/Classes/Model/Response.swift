@@ -10,8 +10,8 @@ import UIKit
 import ObjectMapper
 
 public class Response: NSObject, Mappable {
-    var code: String?
-    var mDescription : String?
+    public var code: String?
+    public var mDescription : String?
     
     public func mapping(map: Map) {
         code <- map["code"]

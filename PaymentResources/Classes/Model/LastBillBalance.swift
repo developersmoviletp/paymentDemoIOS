@@ -10,11 +10,11 @@ import UIKit
 import ObjectMapper
 
 public class LastBillBalance: NSObject, Mappable {
-    var totalPlay : Int?
-    var paymentDeadLine : String?
-    var totalPayDiscount : Int?
-    var earlyPaymentDeadline : String?
-    var cuOffData : String?
+    public var totalPlay : Int?
+    public var paymentDeadLine : String?
+    public var totalPayDiscount : Int?
+    public var earlyPaymentDeadline : String?
+    public var cuOffData : String?
     
     public required convenience init?(map: Map) {
         self.init()

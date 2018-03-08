@@ -10,8 +10,8 @@ import UIKit
 import ObjectMapper
 
 public class GetBillsBRMResponse: BaseResponse {
-    var response: Response?
-    var billingInfo: BillingInfo?
+    public var response: Response?
+    public var billingInfo: BillingInfo?
     
     required convenience public init?(map: Map) {
         self.init()

@@ -10,9 +10,9 @@ import UIKit
 import ObjectMapper
 
 public class UserPassIp: NSObject, Mappable {
-    var userId: String?
-    var password: String??
-    var ip: String?
+    public var userId: String?
+    public var password: String??
+    public var ip: String?
     
     init(userId: String, password: String ,ip : String){
         super.init()

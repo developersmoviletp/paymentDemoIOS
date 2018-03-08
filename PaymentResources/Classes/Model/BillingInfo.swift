@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 
 open class BillingInfo: NSObject, Mappable{
-    var lastBillBalance: LastBillBalance?
+    public var lastBillBalance: LastBillBalance?
     
     required convenience  public init?(map: Map) {
         self.init()

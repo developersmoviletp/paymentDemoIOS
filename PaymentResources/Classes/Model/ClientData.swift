@@ -10,11 +10,11 @@ import UIKit
 import ObjectMapper
 
 public class ClientData: NSObject, Mappable  {
-    var name: String?
-    var email: String?
-    var phone: String?
-    var zipCode: String?
-    var colony: String?
+    public var name: String?
+    public var email: String?
+    public var phone: String?
+    public var zipCode: String?
+    public var colony: String?
     
     public required convenience init?(map: Map) {
         self.init()

@@ -11,12 +11,12 @@ import ObjectMapper
 
 public class PaymentRegisteredCardRequest: BaseRequest {
 
-    var accountNumber : String?
-    var idCard : String?
-    var amount : String?
-    var cvv : String?
+    public var accountNumber : String?
+    public var idCard : String?
+    public var amount : String?
+    public var cvv : String?
     
-    init(accountNumber : String, idCard : String, amount : String, cvv : String) {
+    public init(accountNumber : String, idCard : String, amount : String, cvv : String) {
         super.init()
         self.accountNumber = accountNumber
         self.idCard = idCard
