@@ -215,6 +215,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = XF2RH3K2CN;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -270,9 +271,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-paymentDemoIOS_Example/Pods-paymentDemoIOS_Example-resources.sh",
+				"${PODS_ROOT}/../../PaymentResources/Classes/Media.xcassets/ic_camera.imageset/photo_camera-1.png",
+				"${PODS_ROOT}/../../PaymentResources/Classes/Media.xcassets/ic_camera.imageset/photo_camera-2.png",
+				"${PODS_ROOT}/../../PaymentResources/Classes/Media.xcassets/ic_camera.imageset/photo_camera.png",
+				"${PODS_ROOT}/../../PaymentResources/Classes/views.storyboard",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photo_camera-1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photo_camera-2.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/photo_camera.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/views.storyboardc",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -533,6 +543,7 @@
 			baseConfigurationReference = 91F8864ED44045A2CCD264D8 /* Pods-paymentDemoIOS_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XF2RH3K2CN;
 				INFOPLIST_FILE = paymentDemoIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -548,6 +559,7 @@
 			baseConfigurationReference = AD73A8B85EC27990B5088ECC /* Pods-paymentDemoIOS_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XF2RH3K2CN;
 				INFOPLIST_FILE = paymentDemoIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

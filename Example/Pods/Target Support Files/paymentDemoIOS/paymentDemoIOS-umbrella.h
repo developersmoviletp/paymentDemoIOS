@@ -22,6 +22,7 @@
 #import "CommonCryptor.h"
 #import "CommonDigest.h"
 #import "iCarousel.h"
+#import "paymentDemoIOS.h"
 
 FOUNDATION_EXPORT double paymentDemoIOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char paymentDemoIOSVersionString[];

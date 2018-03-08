@@ -6,7 +6,7 @@ PODS:
     - ObjectMapper (~> 3.0)
   - moa (9.0.2)
   - ObjectMapper (3.1.0)
-  - paymentDemoIOS (1.0.0):
+  - paymentDemoIOS (1.0.5):
     - ActionSheetPicker-3.0
     - Alamofire
     - AlamofireObjectMapper
@@ -39,7 +39,7 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   moa: b73dc5e0efa1fad00711c4608e41b197f4d15b12
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  paymentDemoIOS: 304a8117bf0c9d869c72ce04e0cf69b2467254fa
+  paymentDemoIOS: 7c2317570d25f264dcb7d97bd9cea728e904bb21
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
   RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b

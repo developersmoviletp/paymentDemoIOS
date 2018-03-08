@@ -54,11 +54,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>paymentDemoIOS-paymentDemoIOS.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>paymentDemoIOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>

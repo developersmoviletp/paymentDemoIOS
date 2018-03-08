@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BaseViewController: UIViewController, UITextFieldDelegate {
+open class BaseViewController: UIViewController, UITextFieldDelegate {
 
     var mPresenter : BasePresenter?
     var mPresenters : [BasePresenter]! = []
@@ -18,7 +18,7 @@ public class BaseViewController: UIViewController, UITextFieldDelegate {
     var resultValue : ViewControllerResult = ViewControllerResult.RESULT_ERROR
     var data : [String : AnyObject] = [:]
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         self.title = ""
         mPresenter = getPresenter()
@@ -34,7 +34,7 @@ public class BaseViewController: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tapGesture)
     }
     
-    override public func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         if mPresenter != nil {
             mPresenter?.viewDidAppear()
         }
@@ -43,7 +43,7 @@ public class BaseViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    override public func viewDidDisappear(_ animated: Bool) {
+    override open func viewDidDisappear(_ animated: Bool) {
         if resultDelegate != nil {
             resultDelegate?.viewControllerForResult(keyRequest: requestValue, result: resultValue, data: data)
         }
@@ -63,7 +63,7 @@ public class BaseViewController: UIViewController, UITextFieldDelegate {
         return []
     }
     
-    override public func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if mPresenter != nil {
             mPresenter?.viewWillAppear()
@@ -73,7 +73,7 @@ public class BaseViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    override public func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if mPresenter != nil {
             mPresenter?.viewWillDisappear()

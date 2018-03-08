@@ -9,7 +9,7 @@
 
 import UIKit
 
-public class PayServiceViewController: BaseViewController, CardsCarruselDelegate, ControllerResultDelegate, PayServiceDelegate,GetBillsBRMDelegate {
+open class PayServiceViewController: BaseViewController, CardsCarruselDelegate, ControllerResultDelegate, PayServiceDelegate,GetBillsBRMDelegate {
     
 
     @IBOutlet weak var listCardICarousel: iCarousel!
@@ -27,7 +27,7 @@ public class PayServiceViewController: BaseViewController, CardsCarruselDelegate
     var mGetBillsBRMPresenter : GetBillsBRMPresenter?
     var auxPay : Int = 0
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         clearData()
             
@@ -145,7 +145,7 @@ public class PayServiceViewController: BaseViewController, CardsCarruselDelegate
         ViewControllerUtils.pushViewControllerWithResult(from: self, to: AddNewCardViewController.self, request: AddNewCardViewController.REQUEST_NEW_CARD, extras: nil)
     }
     
-    override public func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
