@@ -23,7 +23,7 @@ public class NewCard: NSObject, Mappable {
     }
     
     
-    init(name : String, lastName : String, secondLastName : String, cardNumber : String, expirationMonth : String,
+    public init(name : String, lastName : String, secondLastName : String, cardNumber : String, expirationMonth : String,
             expirationYear : String, ccType : String) {
         super.init()
         self.name = name

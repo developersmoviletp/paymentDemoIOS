@@ -14,7 +14,7 @@ open class User: Object {
     
     @objc dynamic var accountNumber : String = ""
     
-    convenience init(accountNumber : String) {
+    convenience public init(accountNumber : String) {
         self.init()
         self.accountNumber = accountNumber
     }

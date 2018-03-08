@@ -91,11 +91,11 @@ open class ArrProductosAdicionales  : Object, Mappable, AdicionalesBean {
         self.init()
     }
     
-    func attributeArray() -> [NSObject] {
+    public func attributeArray() -> [NSObject] {
         return Array(self.ArrProductosConvivencia)
     }
     
-    func attrbuteTitleSection() -> String {
+    public func attrbuteTitleSection() -> String {
         return self.agrupacionAddon
     }
 
