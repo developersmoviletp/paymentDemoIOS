@@ -15,8 +15,8 @@ public protocol TX : NSObjectProtocol {
 
 public class DataManager : NSObject {
     
-    var mRealm : Realm?
-    var mTransactions : Transactions?
+   public var mRealm : Realm?
+   public var mTransactions : Transactions?
     
     public func getInstance() -> DataManager {
         if mRealm == nil {
