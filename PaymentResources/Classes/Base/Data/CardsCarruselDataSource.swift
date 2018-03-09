@@ -43,21 +43,38 @@ public class CardsCarruselDataSource: NSObject, iCarouselDataSource, iCarouselDe
     public func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         var view : UIView?
         if index == cards.count {
-            view = Bundle.main.loadNibNamed("ItemAddCardCollectionReusableView", owner: self, options: nil)![0] as! ItemAddCardCollectionReusableView
-        } else {
-            view = Bundle.main.loadNibNamed("ItemTypeCardCollectionReusableView", owner: self, options: nil)![0] as! ItemTypeCardCollectionReusableView
-            let carView : ItemTypeCardCollectionReusableView = view as! ItemTypeCardCollectionReusableView
-            let item : Card = cards[index]
-            carView.numberCardLabel.text = NSString(format: "Tarjeta ... %@", NSString(format: "%@", item.cardNumber).substring(from: 1)) as String
-            if item.ccType != "" {
-                if item.ccType == CardsEnum.VISA {
-                    carView.typeTarjetImageView.image = UIImage(named: "ic_visa_card")
-                } else if item.ccType == CardsEnum.MASTER_CARD {
-                    carView.typeTarjetImageView.image = UIImage(named: "ic_mastercard_card")
-                }
-            } else {
-                carView.typeTarjetImageView.image = nil
+            let matches = Bundle.allFrameworks.filter { (aBundle) -> Bool in
+                guard let identifier = aBundle.bundleIdentifier else { return false }
+                return identifier.contains("paymentDemoIOS") && aBundle.isLoaded
             }
+            if !matches.isEmpty {
+                let last = matches.last!
+                view = last.loadNibNamed("ItemAddCardCollectionReusableView", owner: self, options: nil)![0] as! ItemAddCardCollectionReusableView
+            }
+            
+        } else {
+            let matches2 = Bundle.allFrameworks.filter { (aBundle) -> Bool in
+                guard let identifier = aBundle.bundleIdentifier else { return false }
+                return identifier.contains("paymentDemoIOS") && aBundle.isLoaded
+            }
+            if !matches2.isEmpty {
+                let last = matches2.last!
+                view = last.loadNibNamed("ItemTypeCardCollectionReusableView", owner: self, options: nil)![0] as! ItemTypeCardCollectionReusableView
+                let carView : ItemTypeCardCollectionReusableView = view as! ItemTypeCardCollectionReusableView
+                let item : Card = cards[index]
+                carView.numberCardLabel.text = NSString(format: "Tarjeta ... %@", NSString(format: "%@", item.cardNumber).substring(from: 1)) as String
+                if item.ccType != "" {
+                    if item.ccType == CardsEnum.VISA {
+                        carView.typeTarjetImageView.image = UIImage(named: "ic_visa_card")
+                    } else if item.ccType == CardsEnum.MASTER_CARD {
+                        carView.typeTarjetImageView.image = UIImage(named: "ic_mastercard_card")
+                    }
+                } else {
+                    carView.typeTarjetImageView.image = nil
+                }
+            }
+            
+            
         }
         return view!
     }

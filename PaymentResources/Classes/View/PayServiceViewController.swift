@@ -142,7 +142,16 @@ open class PayServiceViewController: BaseViewController, CardsCarruselDelegate, 
     }
     
     public func onItemAddNewCardClick(){
-        ViewControllerUtils.pushViewControllerWithResult(from: self, to: AddNewCardViewController.self, request: AddNewCardViewController.REQUEST_NEW_CARD, extras: nil)
+        let matches = Bundle.allFrameworks.filter { (aBundle) -> Bool in
+            guard let identifier = aBundle.bundleIdentifier else { return false }
+            return identifier.contains("paymentDemoIOS") && aBundle.isLoaded
+        }
+        if !matches.isEmpty {
+            let last = matches.last!
+            let storyboard = UIStoryboard(name: "Views", bundle: last)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "AddNewCardViewController")
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
     
     override open func didReceiveMemoryWarning() {
