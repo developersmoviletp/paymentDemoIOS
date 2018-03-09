@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemAddCardCollectionReusableView" id="ajm-Cg-viu" customClass="ItemAddCardCollectionReusableView" customModule="EstrategiaDigital" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="252" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fq-sT-Xv0">
+                    <rect key="frame" x="0.0" y="0.0" width="252" height="150"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_backGroundAddCard" translatesAutoresizingMaskIntoConstraints="NO" id="BQo-Bm-S7b">
+                            <rect key="frame" x="0.0" y="0.0" width="252" height="150"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregar tarjeta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3j-bb-25a">
+                            <rect key="frame" x="83.5" y="92" width="85" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.78386211400000005" green="0.78513759370000002" blue="0.79560297729999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_addCard" translatesAutoresizingMaskIntoConstraints="NO" id="OUY-GE-D4d">
+                            <rect key="frame" x="105" y="42" width="42" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="Uck-tu-err"/>
+                                <constraint firstAttribute="width" constant="42" id="iTO-28-b4I"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="h3j-bb-25a" firstAttribute="top" secondItem="OUY-GE-D4d" secondAttribute="bottom" constant="8" id="B2c-BY-jsw"/>
+                        <constraint firstAttribute="trailing" secondItem="BQo-Bm-S7b" secondAttribute="trailing" id="Bds-3g-QNk"/>
+                        <constraint firstItem="BQo-Bm-S7b" firstAttribute="leading" secondItem="8Fq-sT-Xv0" secondAttribute="leading" id="CTR-Iy-Q1U"/>
+                        <constraint firstItem="OUY-GE-D4d" firstAttribute="centerY" secondItem="8Fq-sT-Xv0" secondAttribute="centerY" constant="-12" id="Dbx-SM-MwG"/>
+                        <constraint firstItem="h3j-bb-25a" firstAttribute="centerX" secondItem="8Fq-sT-Xv0" secondAttribute="centerX" id="Up5-56-dYU"/>
+                        <constraint firstItem="BQo-Bm-S7b" firstAttribute="top" secondItem="8Fq-sT-Xv0" secondAttribute="top" id="WLn-hr-HCJ"/>
+                        <constraint firstAttribute="bottom" secondItem="BQo-Bm-S7b" secondAttribute="bottom" id="bpa-Tf-niI"/>
+                        <constraint firstItem="OUY-GE-D4d" firstAttribute="centerX" secondItem="8Fq-sT-Xv0" secondAttribute="centerX" id="s0V-1Y-zrm"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="8Fq-sT-Xv0" firstAttribute="top" secondItem="ajm-Cg-viu" secondAttribute="top" id="aj1-mC-wAV"/>
+                <constraint firstAttribute="bottom" secondItem="8Fq-sT-Xv0" secondAttribute="bottom" id="dke-64-bTD"/>
+                <constraint firstItem="8Fq-sT-Xv0" firstAttribute="leading" secondItem="ajm-Cg-viu" secondAttribute="leading" id="oGr-IF-EEH"/>
+                <constraint firstAttribute="trailing" secondItem="8Fq-sT-Xv0" secondAttribute="trailing" id="uCM-U5-eab"/>
+            </constraints>
+            <point key="canvasLocation" x="60.5" y="111"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="ic_addCard" width="61" height="65"/>
+        <image name="ic_backGroundAddCard" width="108" height="140"/>
+    </resources>
+</document>

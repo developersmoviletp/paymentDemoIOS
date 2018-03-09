@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemTypeCardCollectionReusableView" id="U6b-Vx-4bR" customClass="ItemTypeCardCollectionReusableView" customModule="EstrategiaDigital" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="252" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoF-vG-wmS">
+                    <rect key="frame" x="0.0" y="0.0" width="237" height="150"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_backgroundTypeCard" translatesAutoresizingMaskIntoConstraints="NO" id="aXS-lz-0H8">
+                            <rect key="frame" x="0.0" y="0.0" width="237" height="150"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eCd-DE-xGc">
+                            <rect key="frame" x="93.5" y="42" width="50" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="Dgj-U3-UaB"/>
+                                <constraint firstAttribute="height" constant="42" id="fzG-0W-jX3"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarjeta **** 5171" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuV-k3-Nbb">
+                            <rect key="frame" x="72" y="92" width="93" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.78386211395263672" green="0.7851375937461853" blue="0.79560297727584839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="CuV-k3-Nbb" firstAttribute="centerX" secondItem="eCd-DE-xGc" secondAttribute="centerX" id="JFl-Pc-J0k"/>
+                        <constraint firstItem="eCd-DE-xGc" firstAttribute="centerY" secondItem="eoF-vG-wmS" secondAttribute="centerY" constant="-12" id="TIr-jg-t6h"/>
+                        <constraint firstAttribute="trailing" secondItem="aXS-lz-0H8" secondAttribute="trailing" id="fDC-0T-SgT"/>
+                        <constraint firstItem="CuV-k3-Nbb" firstAttribute="top" secondItem="eCd-DE-xGc" secondAttribute="bottom" constant="8" id="k6S-rk-LZK"/>
+                        <constraint firstItem="eCd-DE-xGc" firstAttribute="centerX" secondItem="eoF-vG-wmS" secondAttribute="centerX" id="kYb-PS-fas"/>
+                        <constraint firstItem="aXS-lz-0H8" firstAttribute="leading" secondItem="eoF-vG-wmS" secondAttribute="leading" id="pmg-Zu-B0q"/>
+                        <constraint firstItem="aXS-lz-0H8" firstAttribute="top" secondItem="eoF-vG-wmS" secondAttribute="top" id="skd-x9-hsp"/>
+                        <constraint firstAttribute="bottom" secondItem="aXS-lz-0H8" secondAttribute="bottom" id="zjA-EH-Ogj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eoF-vG-wmS" secondAttribute="trailing" constant="15" id="0fL-KG-UqN"/>
+                <constraint firstItem="eoF-vG-wmS" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="8vJ-cz-jTZ"/>
+                <constraint firstItem="eoF-vG-wmS" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="GDq-uJ-YSn"/>
+                <constraint firstAttribute="bottom" secondItem="eoF-vG-wmS" secondAttribute="bottom" id="vwe-EO-AsL"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="numberCardLabel" destination="CuV-k3-Nbb" id="Ufa-3a-1BQ"/>
+                <outlet property="typeTarjetImageView" destination="eCd-DE-xGc" id="z9n-jC-eV3"/>
+            </connections>
+            <point key="canvasLocation" x="73" y="116"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="ic_backgroundTypeCard" width="227" height="140"/>
+    </resources>
+</document>
