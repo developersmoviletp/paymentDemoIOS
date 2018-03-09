@@ -1,7 +1,7 @@
 import UIKit
 import ActionSheetPicker_3_0
 
-@IBDesignable class IconTextField: UITextField, UITextFieldDelegate {
+@IBDesignable public class IconTextField: UITextField, UITextFieldDelegate {
     
     //    @IBInspectable var iconLeft : UIImage? = nil
     @IBInspectable var maxCharacters : Int = 50
