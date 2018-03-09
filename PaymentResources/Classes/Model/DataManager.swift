@@ -73,7 +73,7 @@ public class DataManager : NSObject {
     
    public class Transactions : NSObject {
         
-        var mRealm : Realm!
+        public var mRealm : Realm!
         
         init(mRealm : Realm) {
             self.mRealm = mRealm
