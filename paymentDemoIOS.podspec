@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'paymentDemoIOS'
-  s.version          = '1.0.13'
+  s.version          = '1.0.14'
   s.summary          = 'Demo payment'
 
 # This description is used to generate tags and improve search results.

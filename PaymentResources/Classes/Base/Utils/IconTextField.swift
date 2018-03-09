@@ -1,9 +1,7 @@
-
-
 import UIKit
 import ActionSheetPicker_3_0
 
-@IBDesignable open class IconTextField: UITextField, UITextFieldDelegate {
+@IBDesignable class IconTextField: UITextField, UITextFieldDelegate {
     
     //    @IBInspectable var iconLeft : UIImage? = nil
     @IBInspectable var maxCharacters : Int = 50
@@ -12,14 +10,14 @@ import ActionSheetPicker_3_0
     public var indexElementPicker : Int = 0
     public var isEnablePicker : Bool = true
     
-    required public init(coder aDecoder: NSCoder) {
+    public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         self.delegate = self
-        self.tintColor = UIColor.black
-        self.textColor = UIColor.black
+        self.tintColor = UIColor.white
+        self.textColor = UIColor.white
     }
     
-    override open func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         //        if iconLeft != nil{
         //            let image : UIImageView = UIImageView(image: iconLeft)
         //
@@ -35,14 +33,14 @@ import ActionSheetPicker_3_0
         border.borderColor = UIColor.darkGray.cgColor
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
         
-        //border.borderWidth = width
-        //self.layer.addSublayer(border)
+        border.borderWidth = width
+        self.layer.addSublayer(border)
         //        self.layer.masksToBounds = true
     }
     
-    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, kreplacementString string: String) -> Bool {
-        guard let text = textField.text else { return true }
-        let newLength = text.characters.count + string.characters.count - range.length
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+         guard let text = textField.text else { return true }
+         let newLength = text.characters.count + string.characters.count - range.length
         return newLength <= maxCharacters // Bool
     }
     
@@ -66,20 +64,20 @@ import ActionSheetPicker_3_0
         //_ = UITapGestureRecognizer(target: self, action: #selector(self.tapBlurButton(_:)))
     }
     
-    @objc func tapBlurButton(_ sender: UITapGestureRecognizer) {
+     @objc public func tapBlurButton(_ sender: UITapGestureRecognizer) {
         showActionPicker()
     }
     
-    @objc func tapDateBlurButton(_ sender: UITapGestureRecognizer) {
+    @objc public func tapDateBlurButton(_ sender: UITapGestureRecognizer) {
         showActionDatePicker(date: self.text)
     }
     
-    @objc func tapCreditCardDateBlurButton(_ sender: UITapGestureRecognizer) {
+     @objc public func tapCreditCardDateBlurButton(_ sender: UITapGestureRecognizer) {
         showActionCreditCardDatePicker(date: self.text)
     }
     
     public func showActionDatePicker(date : String? = nil){
-        var showDate : Date? = nil
+         var showDate : Date? = nil
         if date != nil && date != "" {
             showDate = DateUtils.toDate(date: date!)
         } else {
@@ -107,7 +105,7 @@ import ActionSheetPicker_3_0
         datePicker?.show()
     }
     
-    public func showActionCreditCardDatePicker(date : String? = nil){
+    func showActionCreditCardDatePicker(date : String? = nil){
         var showDate : Date? = nil
         if date != nil && date != "" {
             showDate = DateUtils.toDate(date: date!)
@@ -136,7 +134,7 @@ import ActionSheetPicker_3_0
         datePicker?.show()
     }
     
-    public func showActionPicker(){
+    func showActionPicker(){
         if isEnablePicker {
             self.resignFirstResponder()
             ActionSheetStringPicker.show(withTitle: self.placeholder, rows: elements, initialSelection: 0, doneBlock: {
