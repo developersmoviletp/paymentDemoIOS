@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'paymentDemoIOS'
-  s.version          = '1.0.15'
+  s.version          = '1.0.16'
   s.summary          = 'Demo payment'
 
 # This description is used to generate tags and improve search results.
@@ -30,11 +30,7 @@ libreria demo para el modulo de payment
 
   s.ios.deployment_target = '9.0'
 
-s.source_files = 'PaymentResources/Classes/**/*.{h,a,m,Swift}'
-  s.resources = 'PaymentResources/Classes/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}'
-  s.frameworks       = 'Accelerate', 'AVFoundation', 'AudioToolbox', 'CoreMedia', 'CoreVideo', 'MobileCoreServices', 'OpenGLES', 'QuartzCore', 'Security', 'UIKit'
-  s.libraries        = 'c++', 'ObjC'
-  s.vendored_libraries = 'PaymentResources/Classes/Base/hresources/libCardIO.a', 'PaymentResources/Classes/Base/hresources/libopencv_core.a', 'PaymentResources/Classes/Base/hresources/libopencv_imgproc.a'
+  s.source_files = 'PaymentResources/Classes/**/*.{h,a,m,Swift}'
   s.dependency 'moa'
   s.dependency 'PKHUD'
   s.dependency 'AlamofireObjectMapper'

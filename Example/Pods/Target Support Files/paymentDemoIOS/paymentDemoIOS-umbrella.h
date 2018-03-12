@@ -10,14 +10,6 @@
 #endif
 #endif
 
-#import "CardIO.h"
-#import "CardIOCreditCardInfo.h"
-#import "CardIODetectionMode.h"
-#import "CardIOPaymentViewController.h"
-#import "CardIOPaymentViewControllerDelegate.h"
-#import "CardIOUtilities.h"
-#import "CardIOView.h"
-#import "CardIOViewDelegate.h"
 #import "CommonCryptoError.h"
 #import "CommonCryptor.h"
 #import "CommonDigest.h"
