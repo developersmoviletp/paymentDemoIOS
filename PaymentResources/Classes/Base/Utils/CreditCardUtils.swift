@@ -10,7 +10,7 @@ import UIKit
 
 public class CreditCardUtils: NSObject {
     
-    static func GetTypeCard(card : String) -> String {
+    public static func GetTypeCard(card : String) -> String {
         
         let regexVisa = "(4[0-9]{12}(?:[0-9]{3})?)"
         let regexMasterC = "(5[1-5][0-9]{14})"
@@ -33,7 +33,7 @@ public class CreditCardUtils: NSObject {
     }
     
     
-    static func GetIdTypeCard(card : String) -> String {
+    public static func GetIdTypeCard(card : String) -> String {
         
         let regexVisa = "(4[0-9]{12}(?:[0-9]{3})?)"
         let regexMasterC = "(5[1-5][0-9]{14})"

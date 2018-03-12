@@ -12,11 +12,11 @@ public class Validator: NSObject {
     
     @objc dynamic var view : UIView!
 
-    func isValid() -> Bool {
+    public func isValid() -> Bool {
         preconditionFailure("This method must be overridden")
     }
     
-    func showError(valid : Bool){
+    public func showError(valid : Bool){
         preconditionFailure("This method must be overridden")
     }
     

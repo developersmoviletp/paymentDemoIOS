@@ -105,7 +105,7 @@ import ActionSheetPicker_3_0
         datePicker?.show()
     }
     
-    func showActionCreditCardDatePicker(date : String? = nil){
+    public func showActionCreditCardDatePicker(date : String? = nil){
         var showDate : Date? = nil
         if date != nil && date != "" {
             showDate = DateUtils.toDate(date: date!)
@@ -134,7 +134,7 @@ import ActionSheetPicker_3_0
         datePicker?.show()
     }
     
-    func showActionPicker(){
+    public func showActionPicker(){
         if isEnablePicker {
             self.resignFirstResponder()
             ActionSheetStringPicker.show(withTitle: self.placeholder, rows: elements, initialSelection: 0, doneBlock: {

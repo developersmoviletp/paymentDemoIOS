@@ -10,7 +10,7 @@ import UIKit
 
 public class DeviceUtils: NSObject {
 
-    class func devideID() -> String{
+    public class func devideID() -> String{
         return UIDevice.current.identifierForVendor!.uuidString
     }
     

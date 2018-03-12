@@ -10,13 +10,13 @@ import UIKit
 
 extension NSData {
     
-    func MD5() -> NSData {
+    public func MD5() -> NSData {
         var hash: [UInt8] = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
         CC_MD5(self.bytes, CC_LONG(self.length), &hash)
         return NSData(bytes: &hash, length: hash.count)
     }
     
-    func copyWithCount(count: Int) -> NSData {
+    public func copyWithCount(count: Int) -> NSData {
         var array = [UInt8](repeating: 0, count: count)
         self.getBytes(&array, length:self.length)
         return NSData(bytes: array, length: count)
@@ -61,7 +61,7 @@ public class Security: NSObject {
         }
     }
     
-    class func decrypt(text: String) -> String{
+    public class func decrypt(text: String) -> String{
         if text != "" {
             let secretKey = "oaguser" as NSString
             let cString = secretKey.cString(using: String.Encoding.utf8.rawValue)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BaseEstrategiaPresenter: BasePresenter, AlamofireResponseDelegate {
+open class BaseEstrategiaPresenter: BasePresenter, AlamofireResponseDelegate {
 
     var mUser : User!
     
@@ -16,7 +16,7 @@ public class BaseEstrategiaPresenter: BasePresenter, AlamofireResponseDelegate {
         mUser = mDataManager.queryWhere(object: User.self).findFirst()
     }
     
-    public func onRequestWs(){
+    open  func onRequestWs(){
         AlertDialog.showOverlay()
     }
     

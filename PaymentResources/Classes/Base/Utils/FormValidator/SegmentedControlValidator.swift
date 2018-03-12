@@ -10,11 +10,11 @@ import UIKit
 
 public class SegmentedControlValidator: Validator {
 
-    var mValidators : [Validator] = []
-    var mSegmentedControl : UISegmentedControl!
-    var mPositionValue : Int = 0
+    public var mValidators : [Validator] = []
+    public var mSegmentedControl : UISegmentedControl!
+    public var mPositionValue : Int = 0
     
-    init(segmentedControl : UISegmentedControl, positionValue : Int, validators : Validator...){
+    public init(segmentedControl : UISegmentedControl, positionValue : Int, validators : Validator...){
         super.init()
         self.mSegmentedControl = segmentedControl
         mPositionValue = positionValue
@@ -23,7 +23,7 @@ public class SegmentedControlValidator: Validator {
         }
     }
     
-    override func isValid() -> Bool{
+    override public func isValid() -> Bool{
         var valid : Bool = true
         if mSegmentedControl.selectedSegmentIndex == mPositionValue {
             for validator in mValidators {
@@ -35,7 +35,7 @@ public class SegmentedControlValidator: Validator {
         return valid
     }
     
-    override func showError(valid : Bool){
+    override public func showError(valid : Bool){
         for validator in mValidators {
             validator.showError(valid: validator.isValid())
         }

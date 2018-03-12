@@ -8,12 +8,12 @@
 
 import UIKit
 
-public class BasePresenter: NSObject {
+open class BasePresenter: NSObject {
     
-    var mViewController : BaseViewController
-    var mDataManager : DataManager!
+    open var mViewController : BaseViewController
+    open var mDataManager : DataManager!
     
-    init(viewController : BaseViewController){
+      init(viewController : BaseViewController){
         self.mViewController = viewController
         mDataManager = DataManager().getInstance()
     }

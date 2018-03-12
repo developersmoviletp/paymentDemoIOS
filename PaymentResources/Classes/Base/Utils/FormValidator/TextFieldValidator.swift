@@ -33,7 +33,7 @@ public class TextFieldValidator: Validator {
     let width = CGFloat(1.0)
     
     
-    init(textField : UITextField, regex : Int, messageError : String){
+    public init(textField : UITextField, regex : Int, messageError : String){
         super.init()
         self.textField = textField
         self.regex = regex
@@ -41,7 +41,7 @@ public class TextFieldValidator: Validator {
         self.view = self.textField
     }
     
-    init(textField : UITextField, regex : Int){
+    public init(textField : UITextField, regex : Int){
         super.init()
         self.textField = textField
         self.regex = regex
@@ -55,7 +55,7 @@ public class TextFieldValidator: Validator {
         textField.layer.masksToBounds = true
     }
     
-    init (textField: UITextField, regex : Int, year : Int, messageError : String){
+    public init (textField: UITextField, regex : Int, year : Int, messageError : String){
         super.init()
         self.textField = textField
         self.regex = regex
@@ -64,7 +64,7 @@ public class TextFieldValidator: Validator {
         self.view = self.textField
     }
     
-    init(textField : UITextField, minCharacters : Int, maxCharacters : Int, messageError : String){
+    public init(textField : UITextField, minCharacters : Int, maxCharacters : Int, messageError : String){
         super.init()
         self.textField = textField
         self.messageError = messageError
@@ -73,7 +73,7 @@ public class TextFieldValidator: Validator {
         self.maxCharacters = maxCharacters
     }
     
-    init(textField : UITextField, regex : Int, minCharacters : Int, maxCharacters : Int, messageError : String){
+    public init(textField : UITextField, regex : Int, minCharacters : Int, maxCharacters : Int, messageError : String){
         super.init()
         self.textField = textField
         self.messageError = messageError
@@ -91,7 +91,7 @@ public class TextFieldValidator: Validator {
         self.valueText = valueText
     }
     
-    override func isValid() -> Bool{
+    override public func isValid() -> Bool{
         var valid : Bool = true
         
         if minCharacters != -1 && textField?.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != ""{
@@ -135,7 +135,7 @@ public class TextFieldValidator: Validator {
         return valid
     }
     
-    override func showError(valid : Bool){
+    override public func showError(valid : Bool){
         var border = CALayer()
         border.frame = CGRect(x: 0, y: textField.frame.size.height - width, width:  textField.frame.size.width, height: textField.frame.size.height)
         border.borderWidth = width

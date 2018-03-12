@@ -10,7 +10,7 @@ import UIKit
 
 public class AddNewCardPresenter: BaseEstrategiaPresenter {
     
-    func saveNewCard(expirationMonth : String, expirationYear: String, name : String, lastName : String, secondLastName : String, creditCardNumber: String, ccType : String){
+    public func saveNewCard(expirationMonth : String, expirationYear: String, name : String, lastName : String, secondLastName : String, creditCardNumber: String, ccType : String){
         let newCard : NewCard = NewCard(name: name, lastName: lastName, secondLastName: secondLastName, cardNumber: creditCardNumber, expirationMonth: expirationMonth, expirationYear: expirationYear, ccType: ccType)
         
         
@@ -19,7 +19,7 @@ public class AddNewCardPresenter: BaseEstrategiaPresenter {
         RetrofitManager<RegisterCardResponse>.init(requestUrl: ApiDefinition.WS_ADD_NEW_CARD, delegate: self).request(requestModel: requestModel)
     }
     
-    func successAddNewCardResponse(requestUrl : String, registerCardResponse : RegisterCardResponse){
+    public func successAddNewCardResponse(requestUrl : String, registerCardResponse : RegisterCardResponse){
         if registerCardResponse.result == "0"{
             AlertDialog.hideOverlay()
             mViewController.resultValue = .RESULT_OK

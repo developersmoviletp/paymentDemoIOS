@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PayServiceDelegate : NSObjectProtocol {
+public protocol PayServiceDelegate : NSObjectProtocol {
     
     func onSuccessLoadCheckBalance(checkBalanceResponse: CheckBalanceBRMResponse)
     
@@ -22,25 +22,25 @@ protocol PayServiceDelegate : NSObjectProtocol {
     
 }
 
-public class PayServicePresenter: BaseEstrategiaPresenter {
+open class PayServicePresenter: BaseEstrategiaPresenter {
     
     var mPayServiceDelegate : PayServiceDelegate!
     var selectedCard : Card!
     var mCheckBalanceResponse : CheckBalanceBRMResponse!
     var mGetBillsBRMDelegate : GetBillsBRMDelegate!
     
-    init(viewController: BaseViewController, payServiceDelegate : PayServiceDelegate, getBillsBRMDelegate:GetBillsBRMDelegate ) {
+    public init(viewController: BaseViewController, payServiceDelegate : PayServiceDelegate, getBillsBRMDelegate:GetBillsBRMDelegate ) {
         super.init(viewController: viewController)
         self.mPayServiceDelegate = payServiceDelegate
         self.mGetBillsBRMDelegate = getBillsBRMDelegate
     }
     
-    func loadBalance(){
+    public func loadBalance(){
         let requestModel : CheckBalanceBRMRequest = CheckBalanceBRMRequest(accountNumber: mUser.accountNumber)
         RetrofitManager<CheckBalanceBRMResponse>.init(requestUrl: ApiDefinition.WS_CHECK_BALANCE_BRM, delegate: self).request(requestModel: requestModel)
     }
     
-    func paymentWithCard(amount1 : String, card : Card){
+    public func paymentWithCard(amount1 : String, card : Card){
         selectedCard = card
         let alert = UIAlertController(title: "Confimar pago", message: "Por seguridad, ingresa el código de seguridad que se encuentra al reverso de tu tarjeta (CVV)", preferredStyle: .alert)
         
@@ -69,7 +69,7 @@ public class PayServicePresenter: BaseEstrategiaPresenter {
         mViewController.present(alert, animated: true, completion: nil)
     }
     
-    func amountToPay(card1: Card){
+    public func amountToPay(card1: Card){
             let alert = UIAlertController(title: "Cantidad a pagar", message: "digita la cantidad que deseas cargar a tu cuenta", preferredStyle: .alert)
             
             alert.addTextField { (textField) in
@@ -92,7 +92,7 @@ public class PayServicePresenter: BaseEstrategiaPresenter {
     }
     
     
-    func payWithCard(amount : String, cvv : String){
+   public  func payWithCard(amount : String, cvv : String){
         if Int(amount)! >= 1 {
             let request : PaymentRegisteredCardRequest = PaymentRegisteredCardRequest(accountNumber: mUser.accountNumber, idCard: selectedCard.idCard, amount: Security.crypt(text: amount), cvv: Security.crypt(text: cvv))
             RetrofitManager<PaymentRegisteredCardResponse>.init(requestUrl: ApiDefinition.WS_PAYMENT_REGISTERED_CARD, delegate: self).request(requestModel: request)
@@ -101,12 +101,12 @@ public class PayServicePresenter: BaseEstrategiaPresenter {
         }
     }
     
-    func loadAccountCards(){
+   public  func loadAccountCards(){
         let requestModel : RegisteredCardsRequest = RegisteredCardsRequest(accountNumber: mUser.accountNumber)
         RetrofitManager<RegisteredCardsResponse>.init(requestUrl: ApiDefinition.WS_MY_ACCOUNT_CARDS, delegate: self).request(requestModel: requestModel)
     }
     
-    func successLoadCheckBalanceResponse(requestUrl : String, checkBalanceResponse : CheckBalanceBRMResponse){
+    public func successLoadCheckBalanceResponse(requestUrl : String, checkBalanceResponse : CheckBalanceBRMResponse){
         mCheckBalanceResponse = checkBalanceResponse
         if checkBalanceResponse.arrResult?.result == 0{
             mPayServiceDelegate.onSuccessLoadCheckBalance(checkBalanceResponse: checkBalanceResponse)
@@ -116,7 +116,7 @@ public class PayServicePresenter: BaseEstrategiaPresenter {
         }
     }
     
-    func successLoadAccountCards(requestUrl : String, registeredCardsResponse : RegisteredCardsResponse){
+    public func successLoadAccountCards(requestUrl : String, registeredCardsResponse : RegisteredCardsResponse){
         if registeredCardsResponse.result == "0"{
             mPayServiceDelegate.onSuccessLoadAccountCards(cards: registeredCardsResponse.cards)            
         } else {
@@ -124,7 +124,7 @@ public class PayServicePresenter: BaseEstrategiaPresenter {
         }
     }
     
-    func successPaymentWithCard(requestUrl : String, paymentRegisteredCardResponse : PaymentRegisteredCardResponse){
+    public func successPaymentWithCard(requestUrl : String, paymentRegisteredCardResponse : PaymentRegisteredCardResponse){
         if (paymentRegisteredCardResponse.resultValue == "0") {
             AlertDialog.hideOverlay()
             let alert = UIAlertController(title: "Pago Existoso", message: "Número de Transacción: \(paymentRegisteredCardResponse.transactionNumber!)", preferredStyle: .alert)
@@ -152,12 +152,12 @@ public class PayServicePresenter: BaseEstrategiaPresenter {
         }
     }
     
-    func getBillsBRM(){
+    public func getBillsBRM(){
         let getBillsBRMRequest : GetBillsBRMRequest = GetBillsBRMRequest(accountNumber: mUser.accountNumber,userPass: UserPassIp(userId:"1002152" , password: "MtpeMobile34%82",ip:"1.1.1.1"))
         RetrofitManager<GetBillsBRMResponse>.init(requestUrl: ApiDefinition.WS_GET_BILLS_BRM, delegate: self).request(requestModel: getBillsBRMRequest)
     }
     
-    func onSuccessGetBillsBRM(requestUrl : String, getBillsBRMResponse: GetBillsBRMResponse){
+    public func onSuccessGetBillsBRM(requestUrl : String, getBillsBRMResponse: GetBillsBRMResponse){
         if getBillsBRMResponse.response?.code == "0" {
             mGetBillsBRMDelegate?.onSuccessGetBillsBRM(getBillsBRMResponse:getBillsBRMResponse)
             AlertDialog.hideOverlay()

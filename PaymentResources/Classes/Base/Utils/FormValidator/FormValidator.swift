@@ -14,19 +14,19 @@ public class FormValidator: NSObject {
     var showAllErrors : Bool?
     var showAnimationError : Bool = true
     
-    init(showAllErrors : Bool, showAnimationError : Bool = true) {
+   public  init(showAllErrors : Bool, showAnimationError : Bool = true) {
         self.validators = NSMutableArray()
         self.showAllErrors = showAllErrors
         self.showAnimationError = showAnimationError
     }
     
-    func addValidators(validators : Validator...){
+    public func addValidators(validators : Validator...){
         for validator in validators{
             self.validators?.add(validator)
         }
     }
     
-    func isValid() -> Bool{
+    public func isValid() -> Bool{
         var valid : Bool = true
         //showAllErrors = false
         if showAllErrors! {

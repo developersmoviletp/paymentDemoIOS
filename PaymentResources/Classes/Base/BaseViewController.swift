@@ -10,13 +10,13 @@ import UIKit
 
 open class BaseViewController: UIViewController, UITextFieldDelegate {
 
-    var mPresenter : BasePresenter?
-    var mPresenters : [BasePresenter]! = []
-    var extras : [String: AnyObject] = [:]
-    var resultDelegate : ControllerResultDelegate?
-    var requestValue : String = ""
-    var resultValue : ViewControllerResult = ViewControllerResult.RESULT_ERROR
-    var data : [String : AnyObject] = [:]
+    open var mPresenter : BasePresenter?
+    open var mPresenters : [BasePresenter]! = []
+    open var extras : [String: AnyObject] = [:]
+    open var resultDelegate : ControllerResultDelegate?
+    open var requestValue : String = ""
+    open var resultValue : ViewControllerResult = ViewControllerResult.RESULT_ERROR
+    open var data : [String : AnyObject] = [:]
     
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -83,11 +83,11 @@ open class BaseViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func onViewControllerResult() {
+    open func onViewControllerResult() {
         
     }
     
-    func onViewControllerResult(params: [String : String]?) {
+    open func onViewControllerResult(params: [String : String]?) {
         
     }
     
@@ -95,17 +95,17 @@ open class BaseViewController: UIViewController, UITextFieldDelegate {
         return self.extras[key] != nil
     }
     
-    @objc func hideKeyboard() {
+    @objc open func hideKeyboard() {
         view.endEditing(true)
     }
     
-    func resignFirstResponser(textFields : UITextField...){
+    open func resignFirstResponser(textFields : UITextField...){
         for textField in textFields{
             textField.resignFirstResponder()
         }
     }
     
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    open  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
     }
     
