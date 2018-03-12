@@ -10,7 +10,7 @@ import UIKit
 
 public class Validator: NSObject {
     
-    @objc dynamic var view : UIView!
+    @objc public dynamic var view : UIView!
 
     public func isValid() -> Bool {
         preconditionFailure("This method must be overridden")

@@ -13,7 +13,7 @@ open class BasePresenter: NSObject {
     open var mViewController : BaseViewController
     open var mDataManager : DataManager!
     
-      init(viewController : BaseViewController){
+     public init(viewController : BaseViewController){
         self.mViewController = viewController
         mDataManager = DataManager().getInstance()
     }

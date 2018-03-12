@@ -12,10 +12,10 @@ import UIKit
 
 public class ServiceAddOnDataSource: NSObject, UITableViewDataSource, UITableViewDelegate{
     
-    var tableView: UITableView?
-    var addOnArray : [AddOn] = []
+    public var tableView: UITableView?
+    public var addOnArray : [AddOn] = []
     
-    init(tableView:UITableView) {
+    public init(tableView:UITableView) {
         super.init()
         self.tableView = tableView
         self.tableView?.dataSource=self
@@ -24,7 +24,7 @@ public class ServiceAddOnDataSource: NSObject, UITableViewDataSource, UITableVie
         self.tableView?.rowHeight = UITableViewAutomaticDimension
     }
     
-    func update(coleccionInfo: [AddOn]){
+    public func update(coleccionInfo: [AddOn]){
         self.addOnArray = coleccionInfo
     }
     

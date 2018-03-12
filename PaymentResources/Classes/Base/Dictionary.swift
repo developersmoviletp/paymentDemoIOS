@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension Dictionary {
+public extension Dictionary {
     
-    subscript(key: APIKeys) -> Value? {
+    public subscript(key: APIKeys) -> Value? {
         get {
             return self[String(describing: key) as! Key]
         }
@@ -27,4 +27,4 @@ extension Dictionary {
 }
 
 
-protocol APIKeys {}
+public protocol APIKeys {}

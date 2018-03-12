@@ -8,7 +8,7 @@
 
 import UIKit
 public protocol GetBillsBRMDelegate : NSObjectProtocol{
-    func onSuccessGetBillsBRM(getBillsBRMResponse: GetBillsBRMResponse)
+     func onSuccessGetBillsBRM(getBillsBRMResponse: GetBillsBRMResponse)
 }
 
 public class GetBillsBRMPresenter: BaseEstrategiaPresenter {

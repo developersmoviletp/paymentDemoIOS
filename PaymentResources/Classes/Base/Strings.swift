@@ -10,12 +10,12 @@ import UIKit
 
 public struct Strings {
     
-    static let GOOGLE_MAP_KEY = "AIzaSyB6gsXrR55tEp7jFu19_TawlQ-cmV8sIkQ"
+    public static let GOOGLE_MAP_KEY = "AIzaSyB6gsXrR55tEp7jFu19_TawlQ-cmV8sIkQ"
     
-    static let LOGIN_REQUEST_USER = "25631"
-    static let LOGIN_REQUEST_PASSWORD = "Middle100$"
-    static let LOGIN_REQUEST_IP = "10.10.10.10"
+    public static let LOGIN_REQUEST_USER = "25631"
+    public static let LOGIN_REQUEST_PASSWORD = "Middle100$"
+    public static let LOGIN_REQUEST_IP = "10.10.10.10"
     
-    static let MICRONEGOCIO_TWOPLAY = "Empresarios Dobleplay"
+    public static let MICRONEGOCIO_TWOPLAY = "Empresarios Dobleplay"
     
 }

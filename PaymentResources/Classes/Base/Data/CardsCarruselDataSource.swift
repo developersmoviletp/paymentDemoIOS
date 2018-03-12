@@ -10,17 +10,17 @@ import UIKit
 
 public class CardsCarruselDataSource: NSObject, iCarouselDataSource, iCarouselDelegate {
     
-    var cards : [Card] = []
-    var selectedCardItem : Card!
-    var carrusel : iCarousel!
-    var delegate : CardsCarruselDelegate!
+    public var cards : [Card] = []
+    public var selectedCardItem : Card!
+    public var carrusel : iCarousel!
+    public var delegate : CardsCarruselDelegate!
     
-    init(carrusel: iCarousel, delegate: CardsCarruselDelegate){
+    public init(carrusel: iCarousel, delegate: CardsCarruselDelegate){
         self.carrusel = carrusel
         self.delegate = delegate
     }
     
-    func update(cards : [Card]) {
+    public func update(cards : [Card]) {
         self.cards = cards
         if cards.count > 0 {
             selectedCardItem = cards[0]
@@ -30,7 +30,7 @@ public class CardsCarruselDataSource: NSObject, iCarouselDataSource, iCarouselDe
         self.carrusel.scroll(toOffset: 0, duration: 0.5)
     }
     
-    func settings(){
+    public func settings(){
         carrusel.type = iCarouselType.linear
         carrusel.delegate = self
         carrusel.dataSource = self

@@ -9,28 +9,28 @@
 import UIKit
 
 public class RegexEnum{
-    static let NOT_EMPTY = 1
-    static let EMAIL = 2
-    static let CP = 3
-    static let LENGHT = 4
-    static let EQUAL_TO = 5
-    static let NOT_EQUAL_TO = 6
-    static let RFC = 7 //
-    static let DATE_YEAR_LESS_TO = 8
+    public static let NOT_EMPTY = 1
+    public static let EMAIL = 2
+    public static let CP = 3
+    public static let LENGHT = 4
+    public static let EQUAL_TO = 5
+    public static let NOT_EQUAL_TO = 6
+    public static let RFC = 7 //
+    public static let DATE_YEAR_LESS_TO = 8
 }
 
 public class TextFieldValidator: Validator {
 
-    var textField : UITextField!
-    var regex : Int?
-    var messageError : String = ""
-    var constraintBottom : NSLayoutConstraint?
-    var minCharacters : Int = -1
-    var maxCharacters : Int = -1
-    var required : Bool = false
-    var valueText : String = ""
-    var year : Int = 0
-    let width = CGFloat(1.0)
+    public var textField : UITextField!
+    public var regex : Int?
+    public var messageError : String = ""
+    public var constraintBottom : NSLayoutConstraint?
+    public var minCharacters : Int = -1
+    public var maxCharacters : Int = -1
+    public var required : Bool = false
+    public var valueText : String = ""
+    public var year : Int = 0
+    public let width = CGFloat(1.0)
     
     
     public init(textField : UITextField, regex : Int, messageError : String){
@@ -83,7 +83,7 @@ public class TextFieldValidator: Validator {
         self.maxCharacters = maxCharacters
     }
     
-    init(textField : UITextField, regex : Int, valueText : String){
+    public init(textField : UITextField, regex : Int, valueText : String){
         super.init()
         self.textField = textField
         self.regex = regex

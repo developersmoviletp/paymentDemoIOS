@@ -55,11 +55,11 @@ open class BaseViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func getPresenter() -> BasePresenter? {
+    public func getPresenter() -> BasePresenter? {
         return nil
     }
     
-    func getPresenters() -> [BasePresenter]? {
+    public func getPresenters() -> [BasePresenter]? {
         return []
     }
     
@@ -91,7 +91,7 @@ open class BaseViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func hasExtra(key: KeysEnum) -> Bool{
+    public func hasExtra(key: KeysEnum) -> Bool{
         return self.extras[key] != nil
     }
     

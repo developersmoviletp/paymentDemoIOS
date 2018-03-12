@@ -10,10 +10,10 @@ import UIKit
 
 public class ViewGroupValidator: Validator {
 
-    var validator : Validator!
-    var validators : [Validator] = []
-    var showAllErrors : Bool = true
-    var valueActivator : Bool = true
+    public var validator : Validator!
+    public var validators : [Validator] = []
+    public var showAllErrors : Bool = true
+    public var valueActivator : Bool = true
     
    public init(validator : Validator, validators : [Validator], showAllErrors : Bool, valueActivator : Bool){
         self.validator = validator

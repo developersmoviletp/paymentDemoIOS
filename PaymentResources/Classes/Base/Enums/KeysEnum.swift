@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum KeysEnum: APIKeys {
+public enum KeysEnum: APIKeys {
 
     case EXTRA_WORK_ORDER
     case EXTRA_TIME_TO_ARRIVE_RESPONSE
